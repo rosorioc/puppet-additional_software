@@ -35,8 +35,10 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class additional_software {
+class additional_software(
+    $enhancers = $additional_software::$enhancers,
+) inherits additional_software::params {
 
 
-include additional_software::install
+    include additional_software::install
 }
